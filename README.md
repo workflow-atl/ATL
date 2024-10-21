@@ -5,4 +5,7 @@ We introduce a method for verifying the correctness properties of workflow proce
 Contains practical approaches for embedding the ATL model checker into the Oracle database 
 ## Notes on Environment Setup
 - The **java** directory contains the Java code of the ATL model checker.
-- Software package versions: Python 3.8.X, Auto-sklearn 0.14.3, H2O cluster version 3.36.0.1
+- The **json** directory contains an example of an input model in JSON format.
+- The **libs** directory contains Java libraries required by the ATL model checker.
+- The **scripts** directory includes the SQL code for setting up the database and the commands for loading the ATL model checker into the Oracle Database JVM (Java Virtual Machine).
+- The **xsd** directory contains the XSD (XML Schema Definition) file used to define the structure and constraints an input model in XML format; also the directory contains an example of an input model in XML format.
