@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="graph" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="graph" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="params">
+          <xs:complexType>
+            <xs:attribute name="connection" type="xs:string" />
+            <xs:attribute name="client" type="xs:string" />
+            <xs:attribute name="formula" type="xs:string" />
+            <xs:attribute name="debug" type="xs:string" />
+            <xs:attribute name="A" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vertices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vertex" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="label" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="edges">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="edge" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="from" type="xs:string" />
+                  <xs:attribute name="to" type="xs:string" />
+                  <xs:attribute name="label" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

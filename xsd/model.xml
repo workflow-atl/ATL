@@ -1,0 +1,45 @@
+<graph>
+<params connection="oracle" client="ATL" formula="&lt;&lt;A&gt;&gt; (not SendInvoiceEmail) U Payment" debug="False" A="0"/>
+<vertices>
+	<vertex label="Start"/>
+	<vertex label="Dr.Availability"/>
+	<vertex label="Dr.Available?"/>
+	<vertex label="MeetingRequest"/>
+	<vertex label="MeetingApproved?"/>
+	<vertex label="NoMeetingMail"/>
+	<vertex label="End1"/>
+	<vertex label="Confirm"/>
+	<vertex label="FreeConsult?"/>
+	<vertex label="SendInvoiceEmail"/>
+	<vertex label="UpdateFees"/>
+	<vertex label="Payment"/>
+	<vertex label="UpdateMeeting"/>
+	<vertex label="Wait"/>
+	<vertex label="RequestFeedback"/>
+	<vertex label="End2"/>
+	<vertex label="ThankToPatient"/>
+	<vertex label="End3"/>
+</vertices>
+<edges>
+	<edge from="1" to="2" label="&lt;none&gt;"/>
+	<edge from="2" to="3" label="&lt;none&gt;"/>
+	<edge from="3" to="4" label="&lt;Yes&gt;"/>
+	<edge from="3" to="6" label="&lt;No&gt;"/>
+	<edge from="4" to="5" label="&lt;none&gt;"/>
+	<edge from="5" to="6" label="&lt;No&gt;"/>
+	<edge from="6" to="7" label="&lt;none&gt;"/>
+	<edge from="5" to="8" label="&lt;none&gt;"/>
+	<edge from="8" to="9" label="&lt;none&gt;"/>
+	<edge from="9" to="10" label="&lt;Yes&gt;"/>
+	<edge from="9" to="11" label="&lt;No&gt;"/>
+	<edge from="11" to="10" label="&lt;none&gt;"/>
+	<edge from="10" to="12" label="&lt;none&gt;"/>
+	<edge from="12" to="6" label="&lt;InvoiceIncomplete&gt;"/>
+	<edge from="12" to="13" label="&lt;none&gt;"/>
+	<edge from="13" to="14" label="&lt;none&gt;"/>
+	<edge from="14" to="15" label="&lt;none&gt;"/>
+	<edge from="15" to="16" label="&lt;NoFeedback&gt;"/>
+	<edge from="15" to="17" label="&lt;none&gt;"/>
+	<edge from="17" to="18" label="&lt;none&gt;"/>
+</edges>
+</graph>
