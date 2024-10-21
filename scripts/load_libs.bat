@@ -1,0 +1,1 @@
+loadjava -thin -user user/password@//localhost:1521/freepdb1 -verbose .\antlrworks-1.4.jar .\javax.json.jar .\json.jar 
