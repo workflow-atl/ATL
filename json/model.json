@@ -1,0 +1,131 @@
+{"graph": {
+    "vertices": {"vertex": [
+        {"label": "Start"},
+        {"label": "Dr.Availability"}, 
+        {"label": "Dr.Available?"},   
+        {"label": "MeetingRequest"},  
+        {"label": "MeetingApproved?"},
+        {"label": "NoMeetingMail"},  
+        {"label": "End1"},
+        {"label": "Confirm"},
+        {"label": "FreeConsult?"},    
+        {"label": "SendInvoiceEmail"}, 
+        {"label": "UpdateFees"},      
+        {"label": "Payment"},
+        {"label": "UpdateMeeting"},   
+        {"label": "Wait"},
+        {"label": "RequestFeedback"}, 
+        {"label": "End2"},
+        {"label": "ThankToPatient"}, 
+        {"label": "End3"}
+    ]},
+    "edges": {"edge": [
+        {
+            "from": "1",
+            "to": "2",
+            "label": "<none>"
+        },
+        {
+            "from": "2",
+            "to": "3",
+            "label": "<none>"
+        },
+        {
+            "from": "3",
+            "to": "4",
+            "label": "<Yes>"
+        },
+        {
+            "from": "3",
+            "to": "6",
+            "label": "<No>"
+        },
+        {
+            "from": "4",
+            "to": "5",
+            "label": "<none>"
+        },
+        {
+            "from": "5",
+            "to": "6",
+            "label": "<No>"
+        },
+        {
+            "from": "6",
+            "to": "7",
+            "label": "<none>"
+        },
+        {
+            "from": "5",
+            "to": "8",
+            "label": "<none>"
+        },
+        {
+            "from": "8",
+            "to": "9",
+            "label": "<none>"
+        },
+        {
+            "from": "9",
+            "to": "10",
+            "label": "<Yes>"
+        },
+        {
+            "from": "9",
+            "to": "11",
+            "label": "<No>"
+        },
+        {
+            "from": "11",
+            "to": "10",
+            "label": "<none>"
+        },
+        {
+            "from": "10",
+            "to": "12",
+            "label": "<none>"
+        },
+        {
+            "from": "12",
+            "to": "6",
+            "label": "<InvoiceIncomplete>"
+        },
+        {
+            "from": "12",
+            "to": "13",
+            "label": "<none>"
+        },
+        {
+            "from": "13",
+            "to": "14",
+            "label": "<none>"
+        },
+        {
+            "from": "14",
+            "to": "15",
+            "label": "<none>"
+        },
+        {
+            "from": "15",
+            "to": "16",
+            "label": "<NoFeedback>"
+        },
+        {
+            "from": "15",
+            "to": "17",
+            "label": "<none>"
+        },
+        {
+            "from": "17",
+            "to": "18",
+            "label": "<none>"
+        }
+    ]},
+    "params": {
+        "A": "0",
+        "debug": "False",
+        "client": "ATL",
+        "formula": "<<A>> (not SendInvoiceEmail) U Payment",
+        "connection": "oracle"
+    }
+}}
