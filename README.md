@@ -8,4 +8,4 @@ Contains practical approaches for embedding the ATL model checker into the Oracl
 - The **json** directory contains an example of an input model in JSON format.
 - The **libs** directory contains Java libraries required by the ATL model checker.
 - The **scripts** directory includes the SQL code for setting up the database and the commands for loading the ATL model checker into the Oracle Database JVM (Java Virtual Machine).
-- The **xsd** directory contains the XSD (XML Schema Definition) file used to define the structure and constraints an input model in XML format. The directory also includes an example of an input model in XML format.
+- The **xsd** directory contains the XSD (XML Schema Definition) file used to define the structure and constraints of an input model in XML format. The directory also includes an example of an input model in XML format.
