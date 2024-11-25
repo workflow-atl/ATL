@@ -14,4 +14,4 @@ inner join APEX_240100.wwv_flow_workflow_transitions wft
        on wfa_from.id = wft.from_activity_id
 inner join APEX_240100.wwv_flow_workflow_activities wfa_to
        on wv.flow_id = wfa_to.flow_id and wv.id = wfa_to.workflow_version_id and wft.to_activity_id = wfa_to.id    
-where wf.name like 'Doctor Appointment - corrected%';
+where wf.name like 'Workflow Name%';
